@@ -18,7 +18,7 @@ To jsou prvky, které vkládám do vektoru. Mají atribut data.
 Public funkce 
 **Empty** - bool typ, je strom prázdný?
 
-**Tree** insert - vkládání do stromu, volá si funkce insert into subtree
+**Tree insert** - vkládání dat typu T, vkládání do stromu, volá si funkce insert into subtree
 
 **Clear** - vyčistí celý strom aniž by dával bacha na vyváženost
 
