@@ -22,7 +22,7 @@ Public funkce
 
 **Clear** - vyčistí celý strom aniž by dával bacha na vyváženost
 
-**Find prvek** - vrátí ukazatel na prvek, který hledám pomocí dat
+**Find prvek** - bere data typu T, a ptr na hnizdo, kde chci začínat, obecně mainroot, vrátí ukazatel na prvek, který hledám pomocí dat
 
 **get_it_down_n_del** - bere za argument data typu T, funkce, která maže prvek a zároveň balancuje strom pomocí reorganize_the_tree a delete_prvek
 
