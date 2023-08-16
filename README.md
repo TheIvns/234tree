@@ -50,7 +50,7 @@ Private
 
 **Reorganize the tree** - při průchodu stromem pro delete prvku je potřeba předělávat hnizda s jedním prvkem, abychom nezpůsobili underflow, o to se stará reorganize the tree. Vrací int podle typu změny, protože pak je potřeba jinak hledat s funkcemi find hnizdo.
 
-**Find successor n insert prvek** - najde successora hledaného prvku a nahradí ho hledaným prvkem, v get don n delete se nahradí prvek succeessorem
+**Find successor n insert prvek** - argumenty - ptr na hnizdo, kde začínám, ptr na prvek, ktery chci poslat dolů, bool jestli jsem už zahnul vpravo, neboť succ je nejmenší prvek po prvku co chci mazat, musím doprava a poté pořád doleva. Hnizdo najde successora hledaného prvku a nahradí ho hledaným prvkem, v get don n delete se nahradí prvek succeessorem
 
 **delete prvek** - argumenty - data typu T, které prvek má, ptr na prvek, který chci smazat, ptr na hnizdo ve kterém se prvek nachází a ptr na jeho parent. Potom, co je daný prvek dole, se maže touhle funkcí.
 
