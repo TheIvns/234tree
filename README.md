@@ -24,7 +24,7 @@ Public funkce
 
 **Find prvek** - vrátí ukazatel na prvek, který hledám pomocí dat
 
-**get_it_down_n_del** - funkce, která maže prvek a zároveň balancuje strom pomocí reorganize_the_tree a delete_prvek
+**get_it_down_n_del** - bere za argument data typu T, funkce, která maže prvek a zároveň balancuje strom pomocí reorganize_the_tree a delete_prvek
 
 **Get_depth** - vrátí hloubku stromu
 
