@@ -32,19 +32,19 @@ Public funkce
 
 Private 
 
-**Insert into subtree** - argumenty - data typu T, co chci vložit, hnizdo, do kterého to chci vložit, jeho parent a bool jestli bylo hnizdo už splitnuto. Normální vkládání až na to, že pokud narazí při vkládání na node s 3 prvky, tak zavolá split funkci, po split funkci se volá insert into subtree ale s hnizdo = Parent a Parent = grandparent, protože by se špatně rozlišovalo, kde po splitu jsem. Tedy je to krok zpátky a insert. Pokud má po splitu Parent, tedy hnizdo, tři nody tak to nechávám být, ať to nesplituju zbytečně.
+**Insert into subtree** - argumenty - data typu T, co chci vložit, ptr na hnizdo, do kterého to chci vložit, jeho ptr na parent a bool jestli bylo hnizdo už splitnuto. Normální vkládání až na to, že pokud narazí při vkládání na node s 3 prvky, tak zavolá split funkci, po split funkci se volá insert into subtree ale s hnizdo = Parent a Parent = grandparent, protože by se špatně rozlišovalo, kde po splitu jsem. Tedy je to krok zpátky a insert. Pokud má po splitu Parent, tedy hnizdo, tři nody tak to nechávám být, ať to nesplituju zbytečně.
 
-**Split** - bere hnizdo, co chci splitnout a jeho parent, splituje hnizdo podle vlastností 234 stromu, je lepší interpretovat graficky, ve zkratce prostřední prvek nahoru a podle toho kde jsem se přepojí pointery
+**Split** - bere ptr na hnizdo, co chci splitnout a jeho parent, splituje hnizdo podle vlastností 234 stromu, je lepší interpretovat graficky, ve zkratce prostřední prvek nahoru a podle toho kde jsem se přepojí pointery
 
-**Insert into hnizdo** - vytvoří nový prvek v hnizdu a automaticky ho korektně zařadí, automaticky zvětšuje Number of nodes daného hnizda. Proto je potřeba při přemísťování ve splitu delete
+**Insert into hnizdo** - argumenty - data typu T, ptr na hnizdo kam to chci vložit, vytvoří nový prvek v hnizdu a automaticky ho korektně zařadí, automaticky zvětšuje Number of nodes daného hnizda. Proto je potřeba při přemísťování ve splitu delete
 
 **Printlv** - vyprintí daný level stromu
 
 **Remove_all** - používá se při clear, všechno smaže
 
-**Find hnizdo with prvek for del** - používat jen při delete, protože volá reorganize_tree. Vrací ukazatel na hnizdo s hledaným prvkem. Pokud najde prvek, už nevolá reorganize the tree, volá si to až find hnízdo with prvek aster switch. Pokud prvek co chceme mazat neexistuje, vyhodí prvek není v databázi, strom je sice přeorganizovaný, ale ničemu by to nemělo vadit, protože při merges and rotations se udržuje pořadí.
+**Find hnizdo with prvek for del** - jaká data hledám, ptr na hnizdo, kde zacinam hledat, ptr na parent hnizda kde zacinam hledat.  Používat jen při delete, protože volá reorganize_tree. Vrací ukazatel na hnizdo s hledaným prvkem. Pokud najde prvek, už nevolá reorganize the tree, volá si to až find hnízdo with prvek aster switch. Pokud prvek co chceme mazat neexistuje, vyhodí prvek není v databázi, strom je sice přeorganizovaný, ale ničemu by to nemělo vadit, protože při merges and rotations se udržuje pořadí.
 
-**Find hnizdo with prvek after switch** - najde hnizdo s hledaným prvkem po find_successor_n_insert_prvek, protože jakmile najdu hnizdo s prvek s Find hnizdo with prvek for del, tak ho musím switchnout s jeho successorem. Poté je zde jiný typ hledání než podle seřazení.
+**Find hnizdo with prvek after switch** - arg - jaká data hledám, ptr na hnizdo, kde byl nalezen prvek funkcí find hnizdo with prvek for del, ptr na parent hnizda kde zacinam hledat. Najde hnizdo s hledaným prvkem po find_successor_n_insert_prvek, protože jakmile najdu hnizdo s prvek s Find hnizdo with prvek for del, tak ho musím switchnout s jeho successorem. Poté je zde jiný typ hledání než podle seřazení.
 
 **Merges and rotations** - rotace a merge pro specifický typ prvků v hnizdu
 
@@ -52,5 +52,6 @@ Private
 
 **Find successor n insert prvek** - najde successora hledaného prvku a nahradí ho hledaným prvkem, v get don n delete se nahradí prvek succeessorem
 
+**delete prvek** - argumenty - data typu T, které prvek má, ptr na prvek, který chci smazat, ptr na hnizdo ve kterém se prvek nachází a ptr na jeho parent. Potom, co je daný prvek dole, se maže touhle funkcí.
 
 
