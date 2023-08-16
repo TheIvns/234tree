@@ -40,7 +40,7 @@ Private
 
 **Printlv** - vyprintí daný level stromu
 
-**Remove_all** - používá se při clear, všechno smaže
+**Remove_all** - argumenty - ptr na hnizdo kde chci mazat. Podívá se na ptrs dolů a poté smaže hnizdo.
 
 **Find hnizdo with prvek for del** - jaká data hledám, ptr na hnizdo, kde zacinam hledat, ptr na parent hnizda kde zacinam hledat.  Používat jen při delete, protože volá reorganize_tree. Vrací ukazatel na hnizdo s hledaným prvkem. Pokud najde prvek, už nevolá reorganize the tree, volá si to až find hnízdo with prvek aster switch. Pokud prvek co chceme mazat neexistuje, vyhodí prvek není v databázi, strom je sice přeorganizovaný, ale ničemu by to nemělo vadit, protože při merges and rotations se udržuje pořadí.
 
