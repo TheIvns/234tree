@@ -32,9 +32,9 @@ Public funkce
 
 Private 
 
-**Insert into subtree** - normální vkládání až na to, že pokud narazí při vkládání na node s 3 prvky, tak zavolá split funkci, po split funkci se volá insert into subtree ale s hnizdo = Parent a Parent = grandparent, protože by se špatně rozlišovalo, kde po splitu jsem. Tedy je to krok zpátky a insert. Pokud má po splitu Parent, tedy hnizdo, tři nody tak to nechávám být, ať to nesplituju zbytečně.
+**Insert into subtree** - argumenty - data typu T, co chci vložit, hnizdo, do kterého to chci vložit, jeho parent a bool jestli bylo hnizdo už splitnuto. Normální vkládání až na to, že pokud narazí při vkládání na node s 3 prvky, tak zavolá split funkci, po split funkci se volá insert into subtree ale s hnizdo = Parent a Parent = grandparent, protože by se špatně rozlišovalo, kde po splitu jsem. Tedy je to krok zpátky a insert. Pokud má po splitu Parent, tedy hnizdo, tři nody tak to nechávám být, ať to nesplituju zbytečně.
 
-**Split** - splituje hnizdo podle vlastností 234 stromu, je lepší interpretovat graficky, ve zkratce prostřední prvek nahoru a podle toho kde jsem se přepojí pointery
+**Split** - bere hnizdo, co chci splitnout a jeho parent, splituje hnizdo podle vlastností 234 stromu, je lepší interpretovat graficky, ve zkratce prostřední prvek nahoru a podle toho kde jsem se přepojí pointery
 
 **Insert into hnizdo** - vytvoří nový prvek v hnizdu a automaticky ho korektně zařadí, automaticky zvětšuje Number of nodes daného hnizda. Proto je potřeba při přemísťování ve splitu delete
 
