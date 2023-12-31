@@ -38,7 +38,6 @@ class TTFT
     void insert(const T& data); 
     bool empty();
     void TREEPRINT();
-    void show_data_mainroot();
     bool is_TTFT();
     void delete_element(const T& data);
     void is_element_in_tree(const T& data);
@@ -310,13 +309,6 @@ void TTFT<T>::printlv(std::unique_ptr<TTFT<T>::nest>& nest_, int n, int pom)
     std::cout<<std::flush;
     return;
 
-}
-
-
-template <class T>
-inline void TTFT<T>::show_data_mainroot()
-{
-    std::cout<<main_root->nest_arr[0]->get_data();
 }
 
 template <class T>
