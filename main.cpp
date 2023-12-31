@@ -48,7 +48,7 @@ bool TRY_fisher(int number_of_data)
     int data[50] = {};
     for(int i = 0; i < number_of_data; i++)
     {
-        data[i] = mt();//jestli to tak funguje
+        data[i] = mt();
         sleep_for(nanoseconds(10));
     }
     for (int i = 0; i < number_of_data; i++)
