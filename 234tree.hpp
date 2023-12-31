@@ -59,7 +59,6 @@ class TTFT
     void split(std::unique_ptr<TTFT<T>::nest>& nest_, std::unique_ptr<TTFT<T>::nest>& parent);
     void printlv(std::unique_ptr<TTFT<T>::nest>& nest_, int n, int pom);
     bool check_subtree(std::unique_ptr<TTFT<T>::nest>& parent, std::unique_ptr<TTFT<T>::nest>& nest_, int parent_control);
-    void relocate (const T& data, std::unique_ptr<TTFT<T>::nest>& destination, int pom);
     bool find_element(const T& data, int pom_depth, std::unique_ptr<TTFT<T>::nest>& parent, std::unique_ptr<TTFT<T>::nest>& nest_, bool deleting, bool right, bool successor);
     bool is_case_I(int pom, std::unique_ptr<TTFT<T>::nest>& nest_);
     void rotate(int to, int from, std::unique_ptr<TTFT<T>::nest>& parent);
